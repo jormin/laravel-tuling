@@ -17,13 +17,15 @@ class TuLing{
      *
      * @param $message
      * @param $userID
+     * @param $location
      * @return mixed
      */
-    public static function chat($message, $userID){
+    public static function chat($message, $userID, $location){
         $params = [
             'key' => config('laravel-tuling.api_key'),
             'info' => $message,
-            'userid' => $userID
+            'userid' => $userID,
+            'loc' => $location
         ];
         $client = new Client();
         $response = $client->post(self::$server, [
