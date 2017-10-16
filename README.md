@@ -35,7 +35,8 @@
     ```php
        $message = '西安天气'；
        $userID = '用户ID';
-       Jormin\TuLing\TuLing::chat($message, $userID);
+       $location = '陕西省西安市雁塔区';
+       Jormin\TuLing\TuLing::chat($message, $userID, $location);
     ```
     
     消息字段详细见 [图灵官方文档](http://www.tuling123.com/help/h_cent_webapi.jhtml?nav=doc).
